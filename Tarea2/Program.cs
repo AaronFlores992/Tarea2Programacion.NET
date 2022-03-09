@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Tarea2.Ejercicio1;
+using Tarea2;
+
+GestorPeliculas gestor = new GestorPeliculas();
+gestor.inicializarDatos();
+gestor.showMenuPrincipal();
+            
