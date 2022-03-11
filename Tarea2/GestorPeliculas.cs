@@ -13,7 +13,7 @@ namespace Tarea2
         public GestorPeliculas() { 
             _peliculas = new List<Pelicula>();
         }
-
+        //Muestra el menu principal
         public void showMenuPrincipal() { 
             int opcion = 0;
             Console.Clear();
@@ -40,7 +40,7 @@ namespace Tarea2
 
             }
         }
-
+        // valida la opcion ingresada
         private bool validaMenu(int opciones, ref int opcionSeleccionada)
         {
             int n;
@@ -66,6 +66,7 @@ namespace Tarea2
             }
         }
 
+        //pide un string/cadena
         private string pedirValorString(string texto)
         {
             string? valor;
@@ -81,6 +82,7 @@ namespace Tarea2
             return valor;
         }
 
+        //Da de alta una pelicula
         private void darAltaPelicula() {
             String nombrePelicula;
             String genero;
@@ -95,7 +97,7 @@ namespace Tarea2
             Console.ReadLine();
             showMenuPrincipal();
         }
-
+        //Menu que Lista las peliculas, ya sean todas  o por categoria.
         private void listarPeliculas() {
             int opcion = 0;
             Console.Clear();
@@ -128,7 +130,7 @@ namespace Tarea2
 
             
         }
-
+        // Lista todas las peliculas.
         private void listarTodasPeliculas() {
             Console.WriteLine("Lista de Peliculas");
             foreach (Pelicula item in _peliculas)
@@ -136,7 +138,7 @@ namespace Tarea2
                 Console.WriteLine(item.ToString());
             }
         }
-
+        //Menu para listar peliculas por formato o por genero.
         private void listarPeliculasPorCategoria() {
             int opcion = 0;
             Console.Clear();
@@ -167,7 +169,7 @@ namespace Tarea2
                     break;
             }
         }
-
+        // Lista pelicula por formato o por genero.
         private void listarPorCategoria(int opcion) {
             Console.Clear();
             if (opcion == 1)
@@ -196,7 +198,7 @@ namespace Tarea2
                 }
             }
         }
-
+        // Borra una pelicula.
         public void borrarPelicula() {
             Console.Clear();
             listarTodasPeliculas();
@@ -215,6 +217,7 @@ namespace Tarea2
             Console.ReadLine();
             showMenuPrincipal();
         }
+        //Inicializa datos.
         public void inicializarDatos() {
             Pelicula pelicula1 = new Pelicula("Xmen", "Accion", "BluRay");
             _peliculas.Add (pelicula1);
