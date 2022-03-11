@@ -267,6 +267,11 @@ namespace Tarea2
             cambiarContadorExistente(p3);
             cambiarContadorExistente(p3);
 
+            cambiarContadorExistente(p2);
+            cambiarContadorExistente(p2);
+            cambiarContadorExistente(p2);
+
+
         }
 
 
