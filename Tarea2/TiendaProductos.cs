@@ -120,7 +120,7 @@ namespace Tarea2
             }
             
         }
-
+        //Cambia Contador de un producto existente
         private void cambiarContadorExistente(Producto producto) {
             int contador = 0;
             Producto prod = _productos.FirstOrDefault(p => p.ToString() == producto.ToString());
@@ -130,6 +130,7 @@ namespace Tarea2
                 prod.contador=contador;
             }
         }
+        //Verifica si existe ya un producto en la lista o no, regresa true o false.
         private Boolean productoExiste(Producto producto) {
             Producto pro = _productos.FirstOrDefault(p => p.ToString() == producto.ToString());
             if (pro == null)
@@ -243,7 +244,7 @@ namespace Tarea2
         }
 
 
-
+        //Inicializa los datos
         public void inicializarDatos() {
             Producto p1 = new Producto("Escoba", "Limpieza");
             _productos.Add(p1);
